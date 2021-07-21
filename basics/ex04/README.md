@@ -16,7 +16,10 @@
    $ mkdir ex04
    $ cd ex04
    $ npm init -y
+   $ npm i -D webpack webpack-cli
    $ npm i -D express
+   $ npm node_modules/.bin/webpack --version
+   $ npx webpack --version
    ```
 2. 프로젝트 디렉토리
    <pre>
@@ -26,8 +29,10 @@
        | --- node-modules
        | --- public
        |        | --- index.html
-       |        | --- index.js
-       |        | --- App.js
+       |        | --- bundle.js
+       |      src
+       |       | --- index.js
+       |       | --- App.js
        | --- dev-server.js
    <pre>
 
@@ -38,9 +43,10 @@
       "version": "1.0.0",
       "description": "",
       "type": "module",
-      "main": "dev-server.js",
+      "main": "dev-server.mjs",
       "scripts": {
-         "start": "node dev-server",
+         "start": "node dev-server.mjs",
+         "build": "npx webpack ./src/index.js -o ./public/bundle.js",
          "test": "echo \"Error: no test specified\" && exit 1"
       },
       "keywords": [],
@@ -53,24 +59,44 @@
    ```
 
 4. 어플리케이션 작성
-   [index.js]
+   [public/index.html]
+   ```html
+      <!DOCTYPE html>
+      <html>
+      <head>
+      <meta charset="UTF-8">
+      <title>#ex03</title>
+      </head>
+      <body>
+         <div id='root'></div>
+         <script src='main.js'></script>
+      </body>
+      </html>
+   ```
+   [src/index.js]
    ```javascript
+   import { App } from './App';
    document.getElementById('root').appendChild(App());
    ```
-   [App.js]
+   [src/App.js]
    ```javascript
    const App = () => {
     const app = document.createElement('h1');
     app.textContent = 'Hello World';
     return app;
    }
+   export { App };
    ```
-5. 테스트(테스트 서버 실행)
+5. 빌드(번들링)
+   ```bash
+   $ npx webpack ./src/index.js -o ./public/bundle.js
+   ```
+
+   ```bash
+   $ npm run build
+   ```
+
+6. 테스트 서버 실행
    ```bash
    $ npm start
    ```
-
-6. 결론
-   - 프론트엔드 어플리케이션이 수십에서 수백 개의 모듈로 분리된 경우, 
-     브라우저에서 개별적으로 이 모듈들을 import하는 것은 상당히 비효율적이다.
-   - 프론트엔드 어플리케이션은 자바스크립트 외에 다양한 애셋(css, images, font) 에 대한 로딩 동기화도 고려되야 한다.
