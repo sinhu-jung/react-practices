@@ -22,7 +22,7 @@ $ npm i -D webpack webpack-cli webpack-dev-server
    <pre>
 
 3. webpack.config.js
-```json
+```javascript
 const path = require('path');
 
 module.exports = {

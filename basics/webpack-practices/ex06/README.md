@@ -29,7 +29,7 @@ $ npm i -D node-sass sass-loader file-loader
    <pre>
 
 3. webpack.config.js
-```json
+```javascript
 const path = require('path');
 
 module.exports = {
