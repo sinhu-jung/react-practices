@@ -14,7 +14,7 @@ $ npm i -D webpack webpack-cli express
        | --- node-modules
        | --- public
        |        | --- index.html
-       |        | --- bundle.js
+       |        | --- main.js
        |      src
        |       | --- index.js
        |       | --- App.js
