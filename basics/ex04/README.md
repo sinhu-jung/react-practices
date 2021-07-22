@@ -33,7 +33,7 @@
        |      src
        |       | --- index.js
        |       | --- App.js
-       | --- dev-server.js
+       | --- dev-server.ㅡjs
    <pre>
 
 3. scripts
