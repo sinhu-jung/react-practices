@@ -11,7 +11,7 @@ const users = [{
     email: 'dooly@gmail.com'
 }];
 
-// 객체 분해 (ES6)
+// 객체 분해 파라미터 (ES6)
 function print({no, name, email}){
     // 템플릿 문자열(ES6)
     console.log(`${no}: ${name} : ${email}`);
