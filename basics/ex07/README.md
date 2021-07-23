@@ -18,7 +18,7 @@
        | --- public
        |        | --- assets
        |        |       | --- images
-       |        |                | --- logo.svg
+       |        |                | --- logo.svg [빌드 결과물]
        |        | --- index.html
        |        | --- bundle.js [빌드 결과물]
        |        | --- favicon.ico
