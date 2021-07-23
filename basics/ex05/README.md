@@ -10,7 +10,7 @@
    ```
 2. 프로젝트 디렉토리
    <pre>
-     /ex04
+     /ex05
        | --- package.json
        | --- package-lock.json
        | --- node-modules
