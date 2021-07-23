@@ -2,24 +2,32 @@
 
 1. 프로젝트 생성
    ```bash
-   $ mkdir ex06
-   $ cd ex06
+   $ mkdir ex07
+   $ cd ex07
    $ npm init -y
    $ npm i -D webpack webpack-cli webpack-dev-server babel-loader @babel/core @babel/preset-env @babel/preset-react
+   $ npm i -D file-loader css-loader style-loader
    $ npm i react react-dom
    ```
 2. 프로젝트 디렉토리
    <pre>
-     /ex06
+     /ex07
        | --- package.json
        | --- package-lock.json
        | --- node-modules
        | --- public
+       |        | --- assets
+       |        |       | --- images
+       |        |                | --- logo.svg
        |        | --- index.html
        |        | --- bundle.js [빌드 결과물]
+       |        | --- favicon.ico
        |      src
+       |       | --- index.css
        |       | --- index.js
+       |       | --- App.css
        |       | --- App.js
+       |       | --- logo.svg
        | --- babel.config.json
        | --- webpack.config.js
    <pre>
@@ -30,7 +38,7 @@
       .
       .
       .
-      "name": "ex04",
+      "name": "ex07",
       "version": "1.0.0",
       "description": "",
       "type": "module",
@@ -47,47 +55,57 @@
 
 4. webpack.config.js
    ```javascript
-   const path = require('path');
+      const path = require('path');
 
-   module.exports = {
-      entry: path.resolve('src/index.js'),
-      output: {
-         path: path.resolve('public'),
-         filename: 'bundle.js'
-      },
-      module: {
-         rules: [{
-               test: /\.js/i,
-               exclude: /node_modules/,
-               loader: 'babel-loader'
-         }]
-      },
-      devServer: {
-         contentBase: path.resolve('public'),
-         host: "0.0.0.0",
-         port: 9999,
-         inline: true,
-         liveReload: true,
-         hot: false,
-         compress: true,
-         historyApiFallback: true
-      }
-   } 
+      module.exports = {
+         entry: path.resolve('src/index.js'),
+         output: {
+            path: path.resolve('public'),
+            filename: 'bundle.js'
+         },
+         module: {
+            rules: [{
+                  test: /\.js/i,
+                  exclude: /node_modules/,
+                  loader: 'babel-loader'
+            }, {
+                  test: /\.css$/i,
+                  use: ['style-loader', 'css-loader']
+            }, {
+                  test: /\.svg$/i,
+                  loader: 'file-loader',
+                  options: {
+                     outputPath: '/assets/images',
+                     name: '[name].[ext]'
+                  }
+            }]
+         },
+         devServer: {
+            contentBase: path.resolve('public'),
+            host: "0.0.0.0",
+            port: 9999,
+            inline: true,
+            liveReload: true,
+            hot: false,
+            compress: true,
+            historyApiFallback: true
+         }
+      } 
    ```
 5. babel.config.json
    ```json
-   {
-      "presets": [["@babel/env", {
-         "targets": {
-               "ie": "11",
-               "edge": "80",
-               "firefox": "73",
-               "chrome": "82",
-               "opera": "69",
-               "safari": "13"
-         }
-      }], "@babel/react"]
-   }
+      {
+         "presets": [["@babel/env", {
+            "targets": {
+                  "edge" : "89",
+                  "ie" : "11",
+                  "firefox" : "92",
+                  "chrome" : "90",
+                  "opera" : "76",
+                  "safari": "15"
+            }
+         }], "@babel/react"]
+      }
    ```
 
 6. 빌드(번들링)
