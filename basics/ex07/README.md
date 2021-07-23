@@ -41,7 +41,6 @@
       "name": "ex07",
       "version": "1.0.0",
       "description": "",
-      "type": "module",
       "main": "index.js",
       "scripts": {
          "start": "npx webpack serve --progress",
