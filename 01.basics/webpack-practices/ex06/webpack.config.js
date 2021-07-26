@@ -9,10 +9,17 @@ module.exports = {
     module: {
         rules: [{
             test: /\.css$/i,
-            use: ['style-loader', 'css-loader']
+            use: ['style-loader', {loader:'css-loader', options:{modules:true}}]
         }, {
-            test: /\.s[ac]ss/i,
+            test: /\.s[ac]ss$/i,
             use: ['style-loader', 'css-loader', 'sass-loader']
+        }, {
+            test: /\.svg$/i,
+            loader: 'file-loader',
+            options: {
+                outputPath: '/assets/images',
+                name: '[name].[ext]'
+            }
         }]
     },
     devServer: {

@@ -69,14 +69,14 @@
                   loader: 'babel-loader'
             }, {
                   test: /\.css$/i,
-                  use: ['style-loader', 'css-loader']
+                  use: ['style-loader', {loader:'css-loader', option:{modules:true}}]
             }, {
-                  test: /\.svg$/i,
-                  loader: 'file-loader',
-                  options: {
-                     outputPath: '/assets/images',
-                     name: '[name].[ext]'
-                  }
+               test: /\.(svg|jpe?g|gif|png|tiff?|bmp|ico|)$/i,
+               loader: 'file-loader',
+               options: {
+                  outputPath: '/assets/images',
+                  name: '[name].[ext]'
+               }
             }]
          },
          devServer: {

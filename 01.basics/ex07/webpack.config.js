@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    mode: 'none',
     entry: path.resolve('src/index.js'),
     output: {
         path: path.resolve('public'),
@@ -13,7 +14,10 @@ module.exports = {
             loader: 'babel-loader'
         }, {
             test: /\.css$/i,
-            use: ['style-loader', 'css-loader']
+            use: ['style-loader', {loader:'css-loader', options:{modules:true}}]
+        }, {
+            test: /\.s[ac]ss$/i,
+            use: ['style-loader', 'css-loader', 'sass-loader']
         }, {
             test: /\.(svg|jpe?g|gif|png|tiff?|bmp|ico|)$/i,
             loader: 'file-loader',
@@ -23,8 +27,10 @@ module.exports = {
             }
         }]
     },
+    devtool: "eval-source-map",
     devServer: {
         contentBase: path.resolve('public'),
+        watchContentBase: true,
         host: "0.0.0.0",
         port: 9999,
         inline: true,
