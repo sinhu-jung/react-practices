@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './App.css';
 
 export default function() {
     return (
@@ -15,7 +16,7 @@ export default function() {
             */}
             <br/>
             <hr/>
-            <img width='100px' src='https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png' />
+            <img width='100px' src='https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png' className={styles['App-logo']}/>
             {/* 
                3. 속성 이름은 DOM API 기반이다.
                <div id='box' class='box'></div>
