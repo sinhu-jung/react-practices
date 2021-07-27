@@ -10,3 +10,4 @@
 
 ### Kanban Board
 ### Guestbook SPA
+### Gallery SPA
