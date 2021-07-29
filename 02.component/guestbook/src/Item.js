@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 
-export default function Item({name, message, regDate}) {
+export default function Item({name, message}) {
     return (
         <li className="Guestbook__List__Item">
             <strong>{ name }</strong>

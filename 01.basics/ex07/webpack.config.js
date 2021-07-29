@@ -1,30 +1,24 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'none',
+    mode: "none",
     entry: path.resolve('src/index.js'),
     output: {
         path: path.resolve('public'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        assetModuleFilename: 'assets/images/[hash][ext]'
     },
     module: {
-        rules: [{
+        rules:[{
+            test: /\.(sa|sc|c)ss$/i,
+            use:['style-loader', 'css-loader', 'sass-loader']
+        }, {
+            test: /\.(png|gif|jpe?g|svg|ico|tiff?|bmp)$/i,
+            type: 'asset/resource'
+        }, {
             test: /\.js$/i,
             exclude: /node_modules/,
             loader: 'babel-loader'
-        }, {
-            test: /\.css$/i,
-            use: ['style-loader', {loader:'css-loader', options:{modules:true}}]
-        }, {
-            test: /\.s[ac]ss$/i,
-            use: ['style-loader', 'css-loader', 'sass-loader']
-        }, {
-            test: /\.(svg|jpe?g|gif|png|tiff?|bmp|ico|)$/i,
-            loader: 'file-loader',
-            options: {
-                outputPath: '/assets/images',
-                name: '[name].[ext]'
-            }
         }]
     },
     devtool: "eval-source-map",
@@ -39,4 +33,4 @@ module.exports = {
         compress: true,
         historyApiFallback: true
     }
-} 
+}

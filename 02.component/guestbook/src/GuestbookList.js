@@ -1,15 +1,13 @@
 import React from 'react';
-import List from './data.json';
 import Item from './Item.js';
 
-export default function GuestbookList() {
+export default function GuestbookList( {messages} ) {
     return (
         <ul className="Guestbook__List">
-            { List.map(list => <Item 
-                                    key={ list.no } 
-                                    name={ list.name }
-                                    message= {list.message}
-                                    regDate={ list.regDate }/>)}
+            { messages.map(message => <Item 
+                                    key={ message.no } 
+                                    name={ message.name }
+                                    message= {message.message}/>)}
         </ul>
     );
 }
