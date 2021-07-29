@@ -8,15 +8,14 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.css$/i,
-            use: ['style-loader', {loader:'css-loader', options:{modules:true}}]
-        }, {
-            test: /\.s[ac]ss/i,
+            test: /\.(sa|sc|c)ss$/i,
             use: ['style-loader', 'css-loader', 'sass-loader']
         }]
     },
+    devtool: "eval-source-map",
     devServer: {
         contentBase: path.resolve('public'),
+        watchContentBase: true,
         host: "0.0.0.0",
         port: 9999,
         inline: true,
