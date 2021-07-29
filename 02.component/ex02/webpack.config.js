@@ -1,13 +1,14 @@
 const path = require('path');
 
 module.exports = (env) => {
-    const entry = path.resolve(`src/${env.src}/index.js`);
+
     return {
         mode: 'none',
-        entry: entry,
+        entry: path.resolve(`src/${env.src}/index.js`),
         output: {
             path: path.resolve('public'),
-            filename: 'bundle.js'
+            filename: 'bundle.js',
+            assetModuleFilename: 'assets/images/[hash].[ext]'
         },
         module: {
             rules: [{
@@ -15,18 +16,17 @@ module.exports = (env) => {
                 exclude: /node_modules/,
                 loader: 'babel-loader'
             }, {
-                test: /\.css$/i,
-                use: ['style-loader', {loader:'css-loader', options:{modules:true}}]
-            }, {
-                test: /\.s[ac]ss$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader']
-            }, {
                 test: /\.(svg|jpe?g|gif|png|tiff?|bmp|ico|)$/i,
-                loader: 'file-loader',
-                options: {
-                    outputPath: '/assets/images',
-                    name: '[name].[ext]'
-                }
+                type: 'asset/resource'
+            }, {
+                test: /\.(sa|sc|c)ss$/i,
+                use: [
+                        'style-loader', 
+                        { 
+                            loader:'css-loader', 
+                            options: { modules: env['css-modules'] !== 'false' }
+                        }, 
+                        'sass-loader']
             }]
         },
         devtool: "eval-source-map",
