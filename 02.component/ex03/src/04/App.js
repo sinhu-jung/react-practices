@@ -3,20 +3,20 @@ import logo from '../assets/images/react-logo.png';
 
 export default function App() {
     const onKeyPressInput = (e) => { 
-        if(e.key = 'Enter') {
+        if(e.key == 'Enter') {
             console.log(e.target.value);
             e.target.value = '';
         } 
     };
     const onFocusInput = (e) => { console.log('onFocusInput'); };
     const onBlurInput = (e) => { console.log('onBlurInput'); };
-    const onMouseOverImage = (e) => {console.log('onMouseOverImage'); };
-    const onMouseMoveImage = (e) => { console.log('onMouseMoveImage'); };
-    const onMouseOutImage = (e) => { console.log('onMouseOutImage'); };
-    const onMouseDownImage = (e) => { console.log('onMouseDownImage'); };
-    const onMouseUpImage = (e) => { console.log('onMouseUpImage'); };
-    const onClickImage = (e) => { console.log('onClickImage'); };
-    const onDoubleClickImage = (e) => { console.log('onDoubleClickImage'); };
+    const onMouseOverImage = (e) => {console.log('onMouseOverImage', `x=${e.clientX}, y=${e.clientY}`); };
+    const onMouseMoveImage = (e) => { console.log('onMouseMoveImage', `x=${e.clientX}, y=${e.clientY}`); };
+    const onMouseOutImage = (e) => { console.log('onMouseOutImage', `x=${e.clientX}, y=${e.clientY}`); };
+    const onMouseDownImage = (e) => { console.log('onMouseDownImage', `x=${e.clientX}, y=${e.clientY}`); };
+    const onMouseUpImage = (e) => { console.log('onMouseUpImage', `x=${e.clientX}, y=${e.clientY}`); };
+    const onClickImage = (e) => { console.log('onClickImage', `x=${e.clientX}, y=${e.clientY}`); };
+    const onDoubleClickImage = (e) => { console.log('onDoubleClickImage' , `x=${e.clientX}, y=${e.clientY}`); };
 
     return (
         <Fragment>
