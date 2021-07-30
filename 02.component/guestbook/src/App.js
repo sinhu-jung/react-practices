@@ -7,8 +7,11 @@ export default function App() {
     const innerRef = useRef(null);
 
     const onScroll = (e) => {
-        console.log('fetch()');
-    }
+        if(outterRef.current.scrollTop + outterRef.current.clientHeight >= innerRef.current.clientHeight -1) {
+            console.log("fetch");
+        }
+    };
+
     return (
         <div 
             ref = { (ref) => outterRef.current = ref }
