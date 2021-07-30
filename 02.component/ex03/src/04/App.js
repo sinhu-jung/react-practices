@@ -1,10 +1,22 @@
-import React, {Fragment, useRef} from 'react';
+import React, {Fragment} from 'react';
 import logo from '../assets/images/react-logo.png';
 
 export default function App() {
-    const imageRef = useRef(null);
-
-
+    const onKeyPressInput = (e) => { 
+        if(e.key = 'Enter') {
+            console.log(e.target.value);
+            e.target.value = '';
+        } 
+    };
+    const onFocusInput = (e) => { console.log('onFocusInput'); };
+    const onBlurInput = (e) => { console.log('onBlurInput'); };
+    const onMouseOverImage = (e) => {console.log('onMouseOverImage'); };
+    const onMouseMoveImage = (e) => { console.log('onMouseMoveImage'); };
+    const onMouseOutImage = (e) => { console.log('onMouseOutImage'); };
+    const onMouseDownImage = (e) => { console.log('onMouseDownImage'); };
+    const onMouseUpImage = (e) => { console.log('onMouseUpImage'); };
+    const onClickImage = (e) => { console.log('onClickImage'); };
+    const onDoubleClickImage = (e) => { console.log('onDoubleClickImage'); };
 
     return (
         <Fragment>
@@ -18,7 +30,6 @@ export default function App() {
                 <br/>
                 <br/>
             <img
-                ref={ imageRef }
                 style={ {
                     cursor: 'pointer',
                     width: 190,
