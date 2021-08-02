@@ -11,6 +11,7 @@ export default function Form() {
     const [gender , setGender] = useState('female');
     const [birthYear, setBirthYear] = useState(1984);
     const [selfDescription, setSelfDescription] = useState('');
+    const [agreeProv, setagreeProv] = useState('no');
 
     return (
         <form id="joinForm" name="joinForm" method="post" action="/do/not/post">
@@ -56,7 +57,12 @@ export default function Form() {
 
             <fieldset>
                 <legend>약관동의</legend>
-                <input id="agree-prov" type="checkbox" name="agreeProv" value= { "yes" } defaultChecked={ false } />
+                <input id="agree-prov" type="checkbox" name="agreeProv" value= { agreeProv } checked={ agreeProv === 'yes' } 
+                       onChange={ e => {
+                           //API 호출
+                           // ex) const url = `/prov/agree>status=${(e.target.value === 'no' ? 'yes' : 'no')}`
+                           setagreeProv((e.target.value === 'no' ? 'yes' : 'no'))
+                       }}/>
                 <label>서비스 약관에 동의합니다.</label>
             </fieldset>
 
