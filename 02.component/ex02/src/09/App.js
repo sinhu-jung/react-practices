@@ -17,7 +17,7 @@ export default function App() {
 
             {/* size */}
             <FontAwesomeIcon icon={ faBell } size='xs' />
-            <FontAwesomeIcon icon={ faBell } size='1g' />
+            <FontAwesomeIcon icon={ faBell } size='lg' />
             <FontAwesomeIcon icon={ faBell } size='2x' />
             <FontAwesomeIcon icon={ faBell } size='3x' />
             <FontAwesomeIcon icon={ faBell } size='4x' />

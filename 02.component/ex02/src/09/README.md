@@ -2,7 +2,7 @@
 
 1. 설치
 ```bash
-$ npm i @fortawesome/fortawesome-svg-core
+$ npm i @fortawesome/fontawesome-svg-core
 $ npm i @fortawesome/react-fontawesome
 ```
 
