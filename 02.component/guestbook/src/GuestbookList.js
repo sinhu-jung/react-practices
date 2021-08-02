@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Item from './Item.js';
 import styles from './assets/scss/GuestbookList.scss';
 
@@ -11,4 +12,8 @@ export default function GuestbookList( {messages} ) {
                                     message= {message.message}/>)}
         </ul>
     );
+}
+
+GuestbookList.propTypes = {
+    messages: PropTypes.arrayOf(PropTypes.object).isRequired
 }
