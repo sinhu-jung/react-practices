@@ -14,7 +14,7 @@ export default function App() {
 			return;
 		}
 
-        if(outterRef.current.scrollTop + outterRef.current.clientHeight >= innerRef.current.clientHeight) {
+        if(outterRef.current.scrollTop + outterRef.current.clientHeight + 20  > innerRef.current.clientHeight) {
             console.log("fetch");
             isFetching = !isFetching;
         }
@@ -23,10 +23,10 @@ export default function App() {
 
     return (
         <div 
-            ref = { (ref) => outterRef.current = ref }
+            ref = { outterRef }
             className={"App"}
             onScroll={ onScroll }>
-            <div ref = { (ref) => innerRef.current = ref }>
+            <div ref = { innerRef }>
                 <Guestbook />
             </div>
         </div>
