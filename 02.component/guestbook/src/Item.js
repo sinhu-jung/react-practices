@@ -16,6 +16,7 @@ export default function Item({name, message}) {
             <strong></strong>
             <a href=''>삭제</a>
         </li>
+        
     );
 }
 
