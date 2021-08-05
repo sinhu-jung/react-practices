@@ -6,9 +6,8 @@ export default function App() {
     return (
         <Fragment>
             <h2>ex05: Component LifeCycle</h2>
-            <button onClick={ () => { setColor(`#${Math.floor(Math.random() * 16777215 ).toString(16)}`) } }>색상변경</button>
+            <button onClick={ () => { setColor(`#${Math.floor(Math.random() * 0xffffff ).toString(16)}`); } }>색상변경</button>
             <br/>
-            <button>색상</button>
             <LifeCycle color={ color }/>
         </Fragment>
     );
