@@ -64,7 +64,9 @@ export default class LifeCycle extends Component {
      * 변경전의 props, state 접근이 가능하다.
      */
     componentDidUpdate(prevProps, prevState, snapshot){
-        snapshot = snapshot.substr(4, snapshot.length-5).split(', ').reduce((acc, cur, i) => acc + parseInt(cur).toString(16), '#');
+        const hexColor = '#'
+        snapshot = snapshot.substr(4, snapshot.length-5).split(', ').reduce((acc, cur, i) => {hexColor + cur.toString(16)});
+
         console.log(`[UPDATE05]: componentDidUpdate(prevProps=${prevProps.color}, prevState=${prevState.color}, snapshot=${snapshot})`)
     }
 
