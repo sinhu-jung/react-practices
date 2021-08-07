@@ -14,10 +14,6 @@ export default function Clock(props) {
     useEffect(() => {
         const interval = setInterval(
             function () {
-                if (++count == 5) {
-                    props.callback();
-                }
-
                 const date = new Date();
                 const hours = date.getHours();
                 const minutes = date.getMinutes();
@@ -27,6 +23,8 @@ export default function Clock(props) {
                 setMinutes(`0${minutes}`.slice(-2));
                 setSeconds(`0${seconds}`.slice(-2));
                 setSession(hours >= 12 ? 'pm' : 'am');
+
+                hours < 12 ? props.callback(1) : hours >= 12 && hours < 18 ? props.callback(2) : props.callback(3);
             }, 1000);
 
         return (function () {
