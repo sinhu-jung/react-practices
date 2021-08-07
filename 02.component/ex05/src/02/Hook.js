@@ -3,7 +3,6 @@ import React, { Fragment, useRef, useState, useEffect } from 'react';
 export default function Hook({ color }) {
     const [boxColor, setBoxColor] = useState( null );
     const [title, setTitle] = useState( " " );
-    const h3Ref = useRef(null);
 
     /**
      * 1. Alternative 1: getDerivedStateFromProps
@@ -46,8 +45,7 @@ export default function Hook({ color }) {
                     width: 300,
                     height: 50,
                     backgroundColor: boxColor
-                } }
-                ref={ h3Ref }    
+                } }    
             />
             <input 
                 type='text' 
