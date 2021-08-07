@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import SevenSegment from './sevenSegment';
+import SetAmPm from './setAmPm';
+import Colon from './Colon';
 import './assets/scss/Clock.scss';
 
 export default function Clock(props) {
@@ -34,32 +37,12 @@ export default function Clock(props) {
 
     return (
         <div className="clock">
-            <div className="numbers">
-                <p>{hours}</p>
-                <p className="placeholder"></p>
-            </div>
-            <div className="colon">
-                <p>:</p>
-            </div>
-            <div className="numbers">
-                <p>{minutes}</p>
-                <p className="placeholder"></p>
-            </div>
-            <div className="colon">
-                <p>:</p>
-            </div>
-            <div className="numbers">
-                <p>{seconds}</p>
-                <p className="placeholder"></p>
-            </div>
-            <div className="AmPm">
-                <div>
-                    <p className={session === 'am' ? 'on' : 'off'}>am</p>
-                </div>
-                <div>
-                    <p className={session === 'pm' ? 'on' : 'off'}>pm</p>
-                </div>
-            </div>
+            <SevenSegment clock={ hours } />
+            <Colon />
+            <SevenSegment clock={ minutes } />
+            <Colon />
+            <SevenSegment clock={ seconds } />
+            <SetAmPm session = { session } />
         </div>
     );
 }
