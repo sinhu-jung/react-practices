@@ -5,6 +5,21 @@
     <pre>
         /app
           | --- /backend
+          |         | --- /logging
+          |         |         | --- index.js
+          |         | --- /routes
+          |         |         | --- [index.js]
+          |         |         | --- authorized.js   
+          |         |         | --- error.js
+          |         | --- /controllers
+          |         | --- /models
+          |         | --- /views
+          |         |        | --- /error
+          |         |                | --- [404.ejs]
+          |         |                | --- [500.ejs]
+          |         | --- /public
+          |         | --- [index.js]
+          |         | --- [app.config.env]
           | --- /frontend
           | --- /node_modules
           | --- package.json
