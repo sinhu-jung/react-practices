@@ -5,8 +5,14 @@
     const path = require('path');
     const dotenv = require('dotenv');
 
+    //0. Startup Arguments
+    const argv = require('minimist')(process.argv.slice(2));
+
     // 1. Environment Variables
     dotenv.config({path: path.join(__dirname, 'app.config.env')})
+
+    // Process Title(Name)
+    process.title = argv.name;
 
     // 2. Application Routers
     const { applicationRouter } = require('./routes');

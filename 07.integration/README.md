@@ -21,6 +21,14 @@
           |         | --- [index.js]
           |         | --- [app.config.env]
           | --- /frontend
+          |         | --- /config
+          |         |        | --- babel.config.json
+          |         |        | --- webpack.config.json
+          |         | --- /public
+          |         |        | --- favicon.ico
+          |         |        | ---  index.html
+          |         | --- /src
+          |         | --- /assets
           | --- /node_modules
           | --- package.json
           | --- package-lock.json
