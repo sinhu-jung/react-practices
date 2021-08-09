@@ -37,6 +37,7 @@
 3. webpack dev server
 4. package.json
 5. node application
+6. concurrently
 
 ## Application
 1. App01:Emaillist(node + react) = React(Frontend) Dev Integration With Node(Backend)
