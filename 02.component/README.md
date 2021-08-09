@@ -6,12 +6,6 @@
 ### ex04: State 
 ### ex05: Component Lifecycle 
 
-### AJAX(fetch, axios)
-1. App01:Emaillist(node + react) = React(Frontend) Dev Integration With Node(Backend)
-2. App02:Guestbook(node + react) = React(Frontend) Dev Integration With Node(Backend)
-3. App02:Gallery(node + react) = React(Frontend) Dev Integration With Node(Backend)
-4. mysite(App02, App03) = React(Frontend) Dev Integration With Node(Backend)
-
 ### Kanban Board
 ### Guestbook SPA
 
