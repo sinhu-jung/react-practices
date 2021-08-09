@@ -5,29 +5,32 @@ import Colon from './Colon';
 import './assets/scss/Clock.scss';
 
 export default function Clock(props) {
-    const [hours, setHours] = useState('00');
-    const [minutes, setMinutes] = useState('00');
-    const [seconds, setSeconds] = useState('00');
-    const [session, setSession] = useState('am');
-    let count = 0;
+    const [state, setState] = useState({
+        count: 0,
+        hours: '00',
+        minutes: '00',
+        seconds: '00'
+    });
 
     useEffect(() => {
         const interval = setInterval(
             function () {
-                if(++count == 5){
+                setState({count: ++state.count});
+                if(state.count == 5){
                     props.showClock();
                 }
                 const date = new Date();
                 const hours = date.getHours();
-                const minutes = date.getMinutes();
-                const seconds = date.getSeconds();
+                const minutes = ('0' + date.getMinutes()).slice(-2);
+                const seconds = ('0' + date.getSeconds()).slice(-2);
+    
+                setState({
+                    hours: ('0' + (hours == 0 ? 12 : (hours > 12 ? hours - 12 : hours))).slice(-2),
+                    minutes: minutes,
+                    seconds: seconds,
+                })
 
-                setHours(`0${hours === 0 ? 12 : hours > 12 ? hours - 12 : hours}`.slice(-2));
-                setMinutes(`0${minutes}`.slice(-2));
-                setSeconds(`0${seconds}`.slice(-2));
-                setSession(hours >= 12 ? 'pm' : 'am');
-
-                
+                hours < 12 ? props.callback(1) : hours >= 12 && hours < 18 ? props.callback(2) : props.callback(3);
             }, 1000);
 
         return (function () {
@@ -38,12 +41,12 @@ export default function Clock(props) {
 
     return (
         <div className="clock">
-            <SevenSegment clock={ hours } />
+            <SevenSegment clock={ state.hours } />
             <Colon />
-            <SevenSegment clock={ minutes } />
+            <SevenSegment clock={ state.minutes } />
             <Colon />
-            <SevenSegment clock={ seconds } />
-            <SetAmPm session = { session } />
+            <SevenSegment clock={ state.seconds } />
+            <SetAmPm session = { state.hours >= 12 ? 'pm' : 'am' } />
         </div>
     );
 }

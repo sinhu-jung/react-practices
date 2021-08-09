@@ -11,7 +11,10 @@ export default function App() {
             <h2>{ now }</h2>
             {
                 showClock ?
-                    <Clock callback={ (e) => { e == 1 ? now : e == 2 ? setNow('Good Afternoon') : setNow('Good Evening'); } } showClock={ () => { setShowClock(!showClock)} } /> : null
+                    <Clock 
+                        callback={ (e) => { e == 1 ? now : e == 2 ? setNow('Good Afternoon') : setNow('Good Evening'); } } 
+                        showClock={ () => { setShowClock(!showClock)} } /> 
+                    : null
             }
         </div>
     );
