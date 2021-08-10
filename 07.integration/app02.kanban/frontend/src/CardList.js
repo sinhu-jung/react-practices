@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Card from './Card';
 import styles from './assets/css/CardList.css';
 
-export default function CardList({title, cards}) {
+export default function CardList({title, cards, notifyTask}) {
     return (
         <div className={styles.CardList}>
             <h1>{ title }</h1>
@@ -12,7 +12,9 @@ export default function CardList({title, cards}) {
                                      title={ card.title } 
                                      description={ card.description }
                                      status={ card.status }
-                                     tasks={card.tasks} />) }
+                                     tasks={card.tasks}
+                                     cardNo={ card.no }
+                                     notifyTask = { notifyTask } />) }
         </div>
     );
 }

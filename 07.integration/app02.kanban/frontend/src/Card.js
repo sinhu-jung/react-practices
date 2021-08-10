@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import TaskList from './TaskList';
 import styles from './assets/scss/Card.scss';
 
-export default function Card({ title, description, status ,tasks }) {
+export default function Card({ cardNo, title, description, status ,tasks, notifyTask }) {
     const [ showDetails, setShowDetails ] = useState(true);
 
     const styleSideColor = {
@@ -26,7 +26,7 @@ export default function Card({ title, description, status ,tasks }) {
                 showDetails ?
                 <div className={styles.Card__Details}>
                     { description }
-                    <TaskList tasks={ tasks } />
+                    <TaskList cardNo={ cardNo } tasks={ tasks } notifyTask={ notifyTask } />
                 </div> : null
             }
         </div>
