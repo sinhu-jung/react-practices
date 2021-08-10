@@ -35,4 +35,29 @@ emails.push({});
 2. src/02
 
 ## How III
-## How IV
+1. I, II는 Nest Object가 있는 경우 까다롭다.
+    - Object.assign은 deep copy 지원 하지 않음
+    - deep clone은 고비용이다.
+    - 직접 하는 방법은 관리가 어렵고 코드에서 실수가 있을 수 있다.
+    - src/03
+2. 자바스크립트 언어적 특징 때뭉에 할 수 없다.
+3. React Addon에 복잡하고 중첩된 객체의 변경을 도와주는 immutality helper 사용한다.
+    - src/04
+    - 적용
+        ```bash
+        $ npm i react-addons-update
+        ```
+
+        ```javascript
+        import update from 'react-addons-update';
+
+        const newObject = update(objectInState, { [where]: { [what]: updateValue }, });
+        ```
+
+        - what 명령
+            1. $push [배열 요소 추가]
+            2. $splice
+            3. $unshift
+            4. $set [속성 변경]
+            5. $merge
+            6. apply
