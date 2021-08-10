@@ -33,5 +33,21 @@ module.exports = {
         } catch(err){
             next(err);
         }
+    },
+
+    deleteTask: (req, res, next) => {
+        try {
+            const cardNo = req.params['cardNo'];
+            const task = req.body;
+            const taskNo = req.params['taskNo'];
+
+            res.status(200).send({
+                result: 'success',
+                data: task,
+                message: null
+            })
+        } catch(err) {
+            next(err);
+        }
     }
 }

@@ -7,7 +7,7 @@ export default function TaskList({ cardNo, tasks, notifyTask }) {
     return(
         <div className={styles.TaskList}>
             <ul>
-                { tasks.map(task => <Task key={task.no} name={task.name} /> )}
+                { tasks.map(task => <Task key={task.no} no={task.no} name={task.name} notifyTask={ notifyTask } cardNo={ cardNo } /> )}
             </ul>
             <input 
                 className={styles.TaskList_input_add_task} 

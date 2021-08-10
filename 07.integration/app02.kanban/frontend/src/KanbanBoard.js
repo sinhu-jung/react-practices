@@ -63,9 +63,50 @@ export default function KanbanBoard() {
                     }
                 }); 
                 setCards(newCards);
-
-                console.log(json);
             } catch(err){
+                console.error(err);
+            }
+        },
+
+        del: async function(taskNo, cardNo, taskName){
+            try{
+                const url = `/api/card/${cardNo}/task/${taskNo}`;
+                const tesk = {
+                    no: null,
+                    name: taskName,
+                    done: false
+                };
+
+                const response = await fetch(url, {
+                    method: 'delete',
+                    headers:{'Content-Type': 'application/json'},
+                    body: JSON.stringify(tesk)
+                });
+
+                if(!response.ok) {
+                    throw new Error(`${response.status} ${response.statusText}`);
+                }
+
+                const json = await response.json();
+                if(json.result !== 'success'){
+                    throw new Error(`${json.result} ${json.message}`);
+                }
+
+                const cardIndex = cards.findIndex((card) => card.no === cardNo);
+                const taskIndex = cards[cardIndex].tasks.findIndex((task) => task.no === taskNo);
+
+                console.log(taskIndex);
+
+                const newCards = update(cards, {
+                    [cardIndex]: { 
+                        tasks : {
+                            $splice: [[taskIndex, 1]]
+                        }
+                    }
+                }); 
+                setCards(newCards);
+
+            } catch (err){
                 console.error(err);
             }
         }
