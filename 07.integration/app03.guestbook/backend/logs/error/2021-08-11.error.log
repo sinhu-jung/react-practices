@@ -1,0 +1,234 @@
+2021-08-11 10:53:30 error: TypeError: models.findAll is not a function
+    at read (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:30:42)
+    at Layer.handle [as handle_request] (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\layer.js:95:5)
+    at C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\index.js:47:12)
+2021-08-11 10:54:19 error: TypeError: Cannot read property 'findAll' of undefined
+    at read (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:30:52)
+    at Layer.handle [as handle_request] (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\layer.js:95:5)
+    at C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\index.js:47:12)
+2021-08-11 10:56:03 error: TypeError: Cannot read property 'findAll' of undefined
+    at read (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:30:52)
+    at Layer.handle [as handle_request] (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\layer.js:95:5)
+    at C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\express\lib\router\index.js:47:12)
+2021-08-11 12:24:50 error: SequelizeValidationError: notNull Violation: Guestbook.name cannot be null,
+notNull Violation: Guestbook.password cannot be null,
+notNull Violation: Guestbook.message cannot be null
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:24:50 error: SequelizeValidationError: notNull Violation: Guestbook.name cannot be null,
+notNull Violation: Guestbook.password cannot be null,
+notNull Violation: Guestbook.message cannot be null
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:26:49 error: SequelizeValidationError: string violation: name cannot be an array or an object,
+string violation: password cannot be an array or an object,
+string violation: message cannot be an array or an object
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:26:50 error: SequelizeValidationError: string violation: name cannot be an array or an object,
+string violation: password cannot be an array or an object,
+string violation: message cannot be an array or an object
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:27:00 error: SequelizeValidationError: string violation: name cannot be an array or an object,
+string violation: password cannot be an array or an object,
+string violation: message cannot be an array or an object
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:27:00 error: SequelizeValidationError: string violation: name cannot be an array or an object,
+string violation: password cannot be an array or an object,
+string violation: message cannot be an array or an object
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:27:38 error: SequelizeValidationError: string violation: name cannot be an array or an object,
+string violation: password cannot be an array or an object,
+string violation: message cannot be an array or an object
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:27:39 error: SequelizeValidationError: string violation: name cannot be an array or an object,
+string violation: password cannot be an array or an object,
+string violation: message cannot be an array or an object
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:28:07 error: SequelizeValidationError: notNull Violation: Guestbook.name cannot be null,
+notNull Violation: Guestbook.password cannot be null,
+notNull Violation: Guestbook.message cannot be null
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:28:07 error: SequelizeValidationError: notNull Violation: Guestbook.name cannot be null,
+notNull Violation: Guestbook.password cannot be null,
+notNull Violation: Guestbook.message cannot be null
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:28:16 error: SequelizeValidationError: notNull Violation: Guestbook.name cannot be null,
+notNull Violation: Guestbook.password cannot be null,
+notNull Violation: Guestbook.message cannot be null
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:28:16 error: SequelizeValidationError: notNull Violation: Guestbook.name cannot be null,
+notNull Violation: Guestbook.password cannot be null,
+notNull Violation: Guestbook.message cannot be null
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:31:31 error: SequelizeValidationError: notNull Violation: Guestbook.name cannot be null,
+notNull Violation: Guestbook.password cannot be null,
+notNull Violation: Guestbook.message cannot be null
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:31:31 error: SequelizeValidationError: notNull Violation: Guestbook.name cannot be null,
+notNull Violation: Guestbook.password cannot be null,
+notNull Violation: Guestbook.message cannot be null
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:31:34 error: SequelizeValidationError: notNull Violation: Guestbook.name cannot be null,
+notNull Violation: Guestbook.password cannot be null,
+notNull Violation: Guestbook.message cannot be null
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:31:34 error: SequelizeValidationError: notNull Violation: Guestbook.name cannot be null,
+notNull Violation: Guestbook.password cannot be null,
+notNull Violation: Guestbook.message cannot be null
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:33:22 error: SequelizeValidationError: notNull Violation: Guestbook.name cannot be null,
+notNull Violation: Guestbook.password cannot be null,
+notNull Violation: Guestbook.message cannot be null
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:33:26 error: SequelizeValidationError: notNull Violation: Guestbook.name cannot be null,
+notNull Violation: Guestbook.password cannot be null,
+notNull Violation: Guestbook.message cannot be null
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 12:35:06 error: SequelizeValidationError: notNull Violation: Guestbook.name cannot be null,
+notNull Violation: Guestbook.password cannot be null,
+notNull Violation: Guestbook.message cannot be null
+    at InstanceValidator._validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:78:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:111:7)
+    at async InstanceValidator.validate (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\instance-validator.js:93:12)
+    at async model.save (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:3890:7)
+    at async Function.create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:2207:12)
+    at async create (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:7:28)
+2021-08-11 14:19:42 error: Error: WHERE parameter "password" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2269:13)
+    at C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2258:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2256:35)
+    at C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2392:30
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator._whereGroupBind (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2391:21)
+    at MySQLQueryGenerator.whereItemQuery (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2327:19)
+    at C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2258:25
+    at Array.forEach (<anonymous>)

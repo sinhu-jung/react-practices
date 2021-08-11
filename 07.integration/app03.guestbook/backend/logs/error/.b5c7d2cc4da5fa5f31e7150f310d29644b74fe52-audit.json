@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\douzone2021\\vscode-projects\\react-practices\\07.integration\\app03.guestbook\\backend\\logs\\error\\.b5c7d2cc4da5fa5f31e7150f310d29644b74fe52-audit.json",
+    "files": [
+        {
+            "date": 1628646363108,
+            "name": "C:\\douzone2021\\vscode-projects\\react-practices\\07.integration\\app03.guestbook\\backend\\logs\\error\\2021-08-11.error.log",
+            "hash": "3b533c53bee7a1f363a50c694954a4c9"
+        }
+    ]
+}
