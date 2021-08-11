@@ -18,9 +18,7 @@ export default function App() {
 			return;
 		}
 
-        if(outterRef.current.scrollTop + outterRef.current.clientHeight  > innerRef.current.clientHeight) {
-            setNo(items[items.length-1].no);
-
+        if(outterRef.current.scrollTop + outterRef.current.clientHeight  >=  innerRef.current.clientHeight - 1) {
             const response = await fetch(`/api/read/${no}`, {
                 method:'get',
                 headers:{'Content-Type': 'application/json'}
@@ -35,9 +33,11 @@ export default function App() {
                 throw new Error(`${json.result} ${json.message}`);
             }
 
+
             const newItems = items.concat(json.data);
 
             setItems(newItems);
+            setNo(items[items.length-1].no);
             isFetching = !isFetching;
         }
         
@@ -60,6 +60,7 @@ export default function App() {
             }
 
             setItems(json.data);
+            setNo(json.data[json.data.length - 1].no);
 
         } catch(err) {
             console.error(err);

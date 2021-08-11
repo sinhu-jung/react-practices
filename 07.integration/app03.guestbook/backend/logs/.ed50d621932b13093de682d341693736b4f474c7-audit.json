@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\tlsgn\\Desktop\\mystudy\\react-practices\\07.integration\\app03.guestbook\\backend\\logs\\.ed50d621932b13093de682d341693736b4f474c7-audit.json",
+    "files": [
+        {
+            "date": 1628678124805,
+            "name": "C:\\Users\\tlsgn\\Desktop\\mystudy\\react-practices\\07.integration\\app03.guestbook\\backend\\logs\\2021-08-11.log",
+            "hash": "34078d1956f320152d7d2b1710c2129d"
+        }
+    ]
+}
