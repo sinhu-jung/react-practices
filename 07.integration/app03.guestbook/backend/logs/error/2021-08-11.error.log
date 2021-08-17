@@ -232,13 +232,3 @@ notNull Violation: Guestbook.message cannot be null
     at MySQLQueryGenerator.whereItemQuery (C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2327:19)
     at C:\douzone2021\vscode-projects\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\dialects\abstract\query-generator.js:2258:25
     at Array.forEach (<anonymous>)
-2021-08-11 19:35:51 error: SequelizeConnectionError: connect ETIMEDOUT
-    at ConnectionManager.connect (C:\Users\tlsgn\Desktop\mystudy\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:126:17)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)
-    at async ConnectionManager._connect (C:\Users\tlsgn\Desktop\mystudy\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:318:24)
-    at async C:\Users\tlsgn\Desktop\mystudy\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:250:32
-    at async ConnectionManager.getConnection (C:\Users\tlsgn\Desktop\mystudy\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:280:7)
-    at async C:\Users\tlsgn\Desktop\mystudy\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\sequelize.js:613:26
-    at async MySQLQueryInterface.select (C:\Users\tlsgn\Desktop\mystudy\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\dialects\abstract\query-interface.js:953:12)
-    at async Function.findAll (C:\Users\tlsgn\Desktop\mystudy\react-practices\07.integration\app03.guestbook\node_modules\sequelize\lib\model.js:1753:21)
-    at async read (C:\Users\tlsgn\Desktop\mystudy\react-practices\07.integration\app03.guestbook\backend\controller\guestbook-api.js:30:29)

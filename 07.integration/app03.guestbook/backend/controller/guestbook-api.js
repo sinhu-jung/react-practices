@@ -3,14 +3,13 @@ const { Op } = require("sequelize");
 
 module.exports = {
     create: async (req, res, next) => {
-        try {   
-            const result = await models.Guestbook.create({ 
+        try {
+            const result = await models.Guestbook.create({
                 name: req.body.name,
                 password: req.body.password,
                 message: req.body.message,
                 regDate: models.sequelize.Sequelize.literal('CURRENT_TIMESTAMP')
-                });
-            console.log(result);
+            });
 
             res.status(200).send({
                 result: 'success',
@@ -23,33 +22,35 @@ module.exports = {
             next(e);
         }
     },
-    
-    read: async function(req, res, next) {
+
+    read: async function (req, res, next) {
         try {
-            const startNo = req.params['no'] || 0;
+            const startNo = req.params.startNo || 0;
             const results = await models.Guestbook.findAll({
                 attributes: ['no', 'name', 'message'],
-                where: (startNo > 0) ? {no: {[Op.lt]: startNo}} : {},
+                where: (startNo > 0) ? { no: { [Op.lt]: startNo } } : {},
                 order: [
                     ['no', 'desc']
                 ],
-                limit: 5
+                limit: 3
             });
 
-            res.send({
-                result: 'success',
-                data: results,
-                message: null
-            });
-        } catch(err){
-          next(err);
-        }       
+            res
+                .status(200)
+                .send({
+                    result: 'success',
+                    data: results,
+                    message: null
+                });
+        } catch (err) {
+            next(err);
+        }
     },
-    delete: async function(req, res, next) {
+    delete: async function (req, res, next) {
         try {
             const result = await models.Guestbook.destroy({
                 where: {
-                    [Op.and]: [{no: req.params.no}, {password: req.body.password}]
+                    [Op.and]: [{ no: req.params.no }, { password: req.body.password }]
                 }
             });
             res.send({
@@ -57,8 +58,8 @@ module.exports = {
                 data: req.params.no,
                 message: null
             });
-        } catch(err){
+        } catch (err) {
             next(err);
         }
-    }  
+    }
 }

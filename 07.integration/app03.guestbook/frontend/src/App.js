@@ -11,60 +11,47 @@ export default function App() {
 
     let isFetching = false;
 
-    const onScroll = async (e) => {
-
-		if(isFetching){
-            isFetching = !isFetching;
-			return;
-		}
-
-        if(outterRef.current.scrollTop + outterRef.current.clientHeight  >=  innerRef.current.clientHeight - 1) {
-            const response = await fetch(`/api/read/${no}`, {
-                method:'get',
-                headers:{'Content-Type': 'application/json'}
-            });
-
-            if(!response.ok) {
-                throw new Error(`${response.status} ${response.statusText}`);
-            }
-
-            const json = await response.json();
-            if(json.result !== 'success'){
-                throw new Error(`${json.result} ${json.message}`);
-            }
-
-
-            const newItems = items.concat(json.data);
-
-            setItems(newItems);
-            setNo(items[items.length-1].no);
-            isFetching = !isFetching;
+    const fetchMessage = async function () {
+        console.log('[ex01. Enter]', ' Fetching');
+        if(isFetching === true) {
+            console.log('[Prevent]', ' Fetching -------');
+            return;
         }
-        
-    };
 
-    useEffect( async () => {
-        try{
-            const response = await fetch('/api/read', {
-                method:'get',
-                headers:{'Content-Type': 'application/json'}
+        isFetching = true;
+        console.log('[02.Start]', ' Fetching');
+
+        const startNo = items.length === 0 ? 0 : items[items.length-1].no;
+
+        try {
+            const response = await fetch(`/api/${startNo}`, {
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'applcation/json'
+                }
             });
 
-            if(!response.ok) {
+            if (!response.ok) {
                 throw new Error(`${response.status} ${response.statusText}`);
             }
 
             const json = await response.json();
-            if(json.result !== 'success'){
-                throw new Error(`${json.result} ${json.message}`);
+            if (json.result !== 'success') {
+                throw json.message;
             }
 
-            setItems(json.data);
-            setNo(json.data[json.data.length - 1].no);
-
-        } catch(err) {
+            // setMessages([...messages, ...json.data]);
+            json.data.length > 0 && setItems([...items, ...json.data]);
+            console.log('[03End]', ' Fetching');
+            isFetching = false;
+        } catch (err) {
             console.error(err);
         }
+    }
+
+    useEffect( async () => {
+        fetchMessage();
     }, []);
 
     
@@ -145,7 +132,11 @@ export default function App() {
         <div 
             ref = { outterRef }
             className={"App"}
-            onScroll={ onScroll }>
+            onScroll={ e => {
+                if (outterRef.current.scrollTop + outterRef.current.clientHeight >= innerRef.current.clientHeight) {
+                    fetchMessage();
+                }
+            }}>
             <div ref = { innerRef }>
                 <Guestbook items={ items } notifyItem={ notifyItem }/>
             </div>

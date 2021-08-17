@@ -1,9 +1,9 @@
 const express = require('express');
-const controller = require('../controller/guestbook-api');
+const authorized = require('./authorized');
+const controller = require('../controllers/gallery');
 
 const router = express.Router();
-router.route('/:startNo((\\d+)?)').get(controller.read);
+router.route('').get(controller.readAll);
 router.route('/:no').delete(controller.delete);
 router.route('').post(controller.create);
-
 module.exports = router;

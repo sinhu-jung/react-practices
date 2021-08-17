@@ -7,12 +7,12 @@ import modalstyles from './assets/scss/modal.scss';
 
 ReactModal.setAppElement('body');
 
-export default function Item({ no, name, message, notifyItem }) {
+export default function Item({ itemNo, name, message, notifyItem }) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [text, setText] = useState('');
 
     const modalHandler = (e) => {
-        notifyItem.del(no, text);
+        notifyItem.del(itemNo, text);
         setModalIsOpen(false);
     }
 
